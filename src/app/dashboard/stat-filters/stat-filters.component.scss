@@ -1,0 +1,8 @@
+select {
+  display: initial;
+}
+
+input.ng-invalid,
+select.ng-invalid {
+  border: 2px solid red;
+}

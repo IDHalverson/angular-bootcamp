@@ -1,0 +1,12 @@
+<div class="vl-container">
+  <div *ngIf="isLoading">LOADING.....</div>
+  <app-video-card
+    *ngFor="let video of videos"
+    [video]="video"
+    [isSelected]="selectedVideo?.id === video.id"
+    [routerLink]="[]"
+    [queryParams]="{ videoId: video.id }"
+  ></app-video-card>
+</div>
+<!--    (click)="handleClickVideo(video)"
+-->

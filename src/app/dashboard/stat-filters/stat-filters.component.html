@@ -1,0 +1,27 @@
+<div>
+  <form [formGroup]="statFiltersData" (ngSubmit)="applyFilters()">
+    <select formControlName="author">
+      <option
+        *ngFor="let author of authors"
+        [innerText]="author"
+        [value]="author"
+      ></option>
+    </select>
+    <button type="button" (click)="clearDropdown()" class="btn">
+      Clear Dropdown
+    </button>
+    <span *ngIf="statFiltersData.get('author')?.hasError('required')"
+      >REQUIRED</span
+    >
+    <input formControlName="titleFilter" />
+    <span *ngIf="statFiltersData.get('titleFilter')?.hasError('minlength')"
+      >PLEASE ENTER AT LEAST 3 CHARS</span
+    >
+    <span *ngIf="statFiltersData.get('titleFilter')?.hasError('required')"
+      >REQUIRED</span
+    >
+    <button [disabled]="!statFiltersData.valid" class="btn">
+      Apply Filters
+    </button>
+  </form>
+</div>

@@ -42,17 +42,7 @@
           "options": {
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "apps/abc/shared/assets",
-                "output": "/assets/"
-              },
-              {
-                "glob": "**/*",
-                "input": "apps/shared/assets",
-                "output": "/assets/"
-              }
+              "src/assets"
             ],
             "index": "src/index.html",
             "inlineStyleLanguage": "scss",
@@ -62,9 +52,8 @@
             "scripts": [
             ],
             "styles": [
-              "src/styles.scss",
-              "apps/abc/shared/shared.scss",
-              "apps/shared/shared.scss"
+              "node_modules/materialize-css/dist/css/materialize.css",
+              "src/styles.scss"
             ],
             "tsConfig": "tsconfig.app.json"
           }

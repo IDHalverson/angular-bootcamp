@@ -1,0 +1,7 @@
+<app-video-list
+  [videos]="(videos | async) ?? []"
+  [selectedVideo]="selectedVideo"
+  [isLoading]="videoService.isLoading"
+></app-video-list>
+<app-video-player [video]="selectedVideo | async"></app-video-player>
+<app-stat-filters></app-stat-filters>
